@@ -1,4 +1,4 @@
-# Welcome to the Waater Data Exchange (WaDE) Ecosystem
+# Welcome to the Water Data Exchange (WaDE) Ecosystem at the Western States Water Council
 
 A metadata repository serves as the homepage to navigate the repositories here 
 

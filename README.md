@@ -35,12 +35,12 @@ https://github.com/WSWCWaterDataExchange/WaDEPortal
 
 
 
-# WaDE regular contributors 
-* [Adel Abdallah](https://www.westernstateswater.org/about-wswc/staff/adel-abdallah/)
-Email: adelabdallah@wswc.utah.gov
-https://github.com/amabdallah
+# WaDE regular contributors   
+* [Adel Abdallah](https://www.westernstateswater.org/about-wswc/staff/adel-abdallah/)   
+Email: adelabdallah@wswc.utah.gov   
+https://github.com/amabdallah   
 
-* [Ryan James](https://www.westernstateswater.org/about-wswc/staff/ryan-james/)
-Email: rjames@wswc.utah.gov
-https://github.com/rwjam
+* [Ryan James](https://www.westernstateswater.org/about-wswc/staff/ryan-james/)   
+Email: rjames@wswc.utah.gov   
+https://github.com/rwjam   
 

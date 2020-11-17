@@ -14,6 +14,9 @@ https://github.com/WSWCWaterDataExchange/WaDE2.0
 ## Scripts and files used in Mapping and Importing States Data To WaDE2.0
 https://github.com/WSWCWaterDataExchange/MappingStatesDataToWaDE2.0
 
+### WaDE data templates (data dictionaries)
+https://github.com/WSWCWaterDataExchange/MappingStatesDataToWaDE2.0/blob/master/DataDict/ReadME.md
+
 
 ## WaDE 2.0 RShiny Apps
 https://github.com/WSWCWaterDataExchange/WaDE2.0Apps

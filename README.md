@@ -2,6 +2,10 @@
 A metadata repository serves as the homepage to navigate the repositories here 
 
 
+## Why is WaDE? Why it is important? 
+Links to pages that document the design docs
+
+
 ## WaDE 2.0 schema, data importer, API and deployment code 
 https://github.com/WSWCWaterDataExchange/WaDE2.0
 

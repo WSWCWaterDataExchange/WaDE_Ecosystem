@@ -1,4 +1,5 @@
-# WaDE_Ecosystem
+# Welcome to the Waater Data Exchange (WaDE) Ecosystem
+
 A metadata repository serves as the homepage to navigate the repositories here 
 
 

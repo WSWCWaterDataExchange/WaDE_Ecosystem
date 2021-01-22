@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Db flnm="WaDE2.0_schema_star2021" nm="WaDE" ver="1.3.4">
+<?xml version="1.0" encoding="UTF-8"?><Db flnm="WaDE2.1_schema" nm="WaDE" ver="1.3.4">
   <VerLbl/>
   <VerNotes/>
   <DefTblOpts/>
@@ -5755,7 +5755,12 @@ Some tables like the Allocations table might change over time but much slowly</N
       <BoolOpt lbl="Views" nm="doc.views" on="1" spl="0"/>
     </BasicOptionMgr>
   </DbDocOptionMgr>
-  <OpenEditors/>
+  <OpenEditors>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE.3_AggregatedAmounts" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE.2_SiteSpecificAmounts" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE.1_WaterAllocations" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE.4_RegulatoryInfo" selected="1"/>
+  </OpenEditors>
   <TreePaths>
     <TreePath/>
     <TreePath>/Diagrams (6)</TreePath>

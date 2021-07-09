@@ -6,7 +6,7 @@
 </header>
 <body>
 <div class="logo">
-<p>WaDE [WaDE2.1_schema.xml]</p>
+<p>WaDE2.0 [WaDE2.01.xml]</p>
 </div>
 <div class="horzMenu">
 <a class="horzMenu" href="../index.html"> Home</a><a class="horzMenu" href="../tables/index.html">Tables</a><a class="horzMenu" href="../schemas/index.html">Schemas</a><a class="horzMenu" href="../diagrams/index.html">Diagrams</a><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a><a class="horzMenu" href="../indexes/index.html">Indexes</a>
@@ -27,61 +27,67 @@
 </td><td class="PkCol"><a href="../columns/Core_AggregatedAmounts_fact_AggregatedAmountID.html">AggregatedAmountID</a></td><td class="PkCol">BigInt</td><td class="PkCol"> </td><td class="PkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="PkCol"> </td><td class="PkCol">Internal unique identifier</td><td class="PkCol"> </td>
+</td><td class="PkCol"> </td><td class="PkCol">Primary internal key unique identifier for aggregated amount records.</td><td class="PkCol"> </td>
 </tr>
 <tr class="altRow">
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_OrganizationID.html">OrganizationID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">foreign key unique identifier to the organization</td><td class="FkCol">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_MethodID.html">MethodID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Primary internal key unique identifier for method records.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
 <tr>
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_ReportingAreaID.html">ReportingAreaID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">foreign key unique identifier to the reporting unit</td><td class="FkCol">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_OrganizationID.html">OrganizationID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Primary internal key unique identifier for organization records.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
 <tr class="altRow">
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_VariableSpecificID.html">VariableSpecificID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">foreign key unique identifier to the variable</td><td class="FkCol">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_ReportingUnitID.html">ReportingUnitID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Primary internal key unique identifier for reporting units records.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
 <tr>
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_PrimaryUseCategoryCV.html">PrimaryUseCategoryCV</a></td><td class="FkCol">NVarChar(250)</td><td class="FkCol">
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_VariableSpecificID.html">VariableSpecificID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Primary internal key unique identifier for variable records.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
 <tr class="altRow">
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_WaterSourceID.html">WaterSourceID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">foreign key unique identifier to the source</td><td class="FkCol">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_WaterSourceID.html">WaterSourceID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Primary internal key unique identifier for water source records.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
 <tr>
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_MethodID.html">MethodID</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">A unique identifierfor each database instance that implements the table</td><td class="FkCol">
+<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_AllocationCropDutyAmount.html">AllocationCropDutyAmount</a></td><td>Float</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td>
+</td><td> </td><td> </td><td>Crop Duty amount. The number of acres of land that is irrigated for the complete growth of a crop by supplying 1-meter cubes per second of water continuously throughout the crop.</td><td> </td>
 </tr>
 <tr class="altRow">
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_TimeframeStartID.html">TimeframeStartID</a></td><td class="FkCol">BigInt</td><td class="FkCol">
+<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_Amount.html">Amount</a></td><td>Float</td><td> </td><td> </td><td> </td><td>The aggregated amount of water in the area.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_CommunityWaterSupplySystem.html">CommunityWaterSupplySystem</a></td><td>NVarChar(250)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Start date for the allocation each year in MM/DD/YYYY	</td><td class="FkCol">
+</td><td> </td><td> </td><td>Name of the community water system the water right serves (if available).</td><td> </td>
+</tr>
+<tr class="altRow">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_CropTypeCV.html">CropTypeCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">The type of crop watered by the water right (if available) (e.g., wheat, alfalfa, corn, hay, etc.) (applies mostly to irrigation uses).</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
 <tr>
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_TimeframeEndID.html">TimeframeEndID</a></td><td class="FkCol">BigInt</td><td class="FkCol">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_CustomerTypeCV.html">CustomerTypeCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">End date for the allocation each year in MM/DD/YYYY	</td><td class="FkCol">
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Description of the type of customer the water right services (e.g., Residential, Commercial, Industrial, Institutional, Combined, Unspecified, etc).</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
@@ -90,7 +96,7 @@
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_DataPublicationDateID.html">DataPublicationDateID</a></td><td class="FkCol">BigInt</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Date that these data were published by the data provider	</td><td class="FkCol">
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Date that this data was published by the data provider to the public.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
@@ -99,37 +105,67 @@
 <td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_DataPublicationDOI.html">DataPublicationDOI</a></td><td>NVarChar(100)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>a unique digital object identifier into the original dataset</td><td> </td>
+</td><td> </td><td> </td><td>A unique digital object identifier into the original dataset.</td><td> </td>
 </tr>
 <tr class="altRow">
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_ReportYearCV.html">ReportYearCV</a></td><td class="FkCol">NChar(4)</td><td class="FkCol">
+<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_InterbasinTransferFromID.html">InterbasinTransferFromID</a></td><td>NVarChar(100)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Annual reporting period that this data are valid. There is a need to ensure the annual reporting period year matches the type of year used by the data provider. For example, if the data are valid for November 2018, the annual reporting period could be 2018 or 2019 depending on whether the data provider uses a calendar or water year.</td><td class="FkCol">
+</td><td> </td><td> </td><td>Identifier name / ID of the basin if the water supply type for the reporting unit is designated as an interbasin transfer and from another basin.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_InterbasinTransferToID.html">InterbasinTransferToID</a></td><td>NVarChar(100)</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>Identifier name / ID of the basin if the water supply type for the reporting unit is designated as an interbasin transfer and used in another basin.</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_IrrigatedAcreage.html">IrrigatedAcreage</a></td><td>Float</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>Number of acres irrigated by the water right (if available).</td><td> </td>
+</tr>
+<tr>
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_IrrigationMethodCV.html">IrrigationMethodCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">A term to describe the method used for the place of use (if available) (applies mostly to irrigation beneficial uses).</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
-</tr>
-<tr>
-<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_Amount.html">Amount</a></td><td>Float</td><td> </td><td> </td><td> </td><td>The aggregated variable amount</td><td> </td>
 </tr>
 <tr class="altRow">
 <td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_PopulationServed.html">PopulationServed</a></td><td>Float</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>Population served by the aggregated variable amount, If municipal or community water supply is a specified beneficial use	</td><td> </td>
+</td><td> </td><td> </td><td>The amount of population served by the water right (if available).</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_CommunityWaterSupplySystem.html">CommunityWaterSupplySystem</a></td><td>NVarChar(250)</td><td>
+<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_PowerGeneratedGWh.html">PowerGeneratedGWh</a></td><td>Float</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>Community Water Supply System name</td><td> </td>
+</td><td> </td><td> </td><td>The power (GWh) to be generated by the water right record (if available) (mostly applies to power generating beneficial uses).</td><td> </td>
 </tr>
 <tr class="altRow">
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_CustomerTypeCV.html">CustomerTypeCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol">
+<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_PowerType.html">PowerType</a></td><td>NVarChar(50)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Residential, Commercial, Industrial, Institutional, Combined, Unspecified</td><td class="FkCol">
+</td><td> </td><td> </td><td>Description of the type of power generated.</td><td> </td>
+</tr>
+<tr>
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_PrimaryUseCategoryCV.html">PrimaryUseCategoryCV</a></td><td class="FkCol">NVarChar(250)</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">The primary stated purpose by the water allocation (if available).</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td>
+</tr>
+<tr class="altRow">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_ReportYearCV.html">ReportYearCV</a></td><td class="FkCol">BigInt</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Year corresponding to the annual reporting period for the aggregated data in the reporting unit.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
@@ -138,58 +174,28 @@
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_SDWISIdentifierCV.html">SDWISIdentifierCV</a></td><td class="FkCol">NVarChar(250)</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">If the use is municipal, the data provider can add the SDWIS identifier for the CWS</td><td class="FkCol">
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">If the use is municipal, the data provider can add the SDWIS identifier for the CWS.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
 <tr class="altRow">
-<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_PowerGeneratedGWh.html">PowerGeneratedGWh</a></td><td>Float</td><td>
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_TimeframeEndID.html">TimeframeEndID</a></td><td class="FkCol">BigInt</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>GWh to be generated by the aggregated variable amount, if thermoelectric is a specified beneficial use</td><td> </td>
-</tr>
-<tr>
-<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_IrrigatedAcreage.html">IrrigatedAcreage</a></td><td>Float</td><td>
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>Number of acres irrigated by the aggregated variable amount, if irrigation or agriculture is a specified beneficial use	</td><td> </td>
-</tr>
-<tr class="altRow">
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_CropTypeCV.html">CropTypeCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol">
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">If the amount of water used is associated with an irrigated acreage of a specific crop type, this can be added. These would be Wheat, Alfalfa, Corn, Hay, etc.</td><td class="FkCol">
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Primary internal key unique identifier for end date when the water right no longer can legally access the assigned water.  Format of MM/DD.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_LivestockServed.html">LivestockServed</a></td><td>Float</td><td>
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_TimeframeStartID.html">TimeframeStartID</a></td><td class="FkCol">BigInt</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>number of Livestock Served by this water</td><td> </td>
-</tr>
-<tr class="altRow">
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AggregatedAmounts_fact_IrrigationMethodCV.html">IrrigationMethodCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol">
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">The irrigation method used by the irrigator. This could be Flood, Sprinkler, Micro-drip, Laser-leveled Flood, Combination, or Unspecified</td><td class="FkCol">
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Primary internal key unique identifier for start date when the water right can legally access the assigned water.  Format of MM/DD.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
-</tr>
-<tr>
-<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_InterbasinTransferToID.html">InterbasinTransferToID</a></td><td>NVarChar(100)</td><td>
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>If the data provider has a water use type for the reporting unit that is designated an interbasin transfer, they may add the receiving basin here.	</td><td> </td>
-</tr>
-<tr class="altRow">
-<td> </td><td><a href="../columns/Core_AggregatedAmounts_fact_InterbasinTransferFromID.html">InterbasinTransferFromID</a></td><td>NVarChar(100)</td><td>
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>If the data provider has a water supply type for the reporting unit that is designated an interbasin transfer, they may add the delivering basin identifier here.	</td><td> </td>
 </tr>
 </table>
 <br>
@@ -213,7 +219,7 @@
 <td><a href="../foreignKeys/Core_AggregatedAmounts_fact_fk_AggregatedAmounts_Date_dim_start.html">fk_AggregatedAmounts_Date_dim_start</a></td><td><a href="../tables/Core_Date_dim.html">Core.Date_dim</a></td><td><a href="../tables/Core_AggregatedAmounts_fact.html">Core.AggregatedAmounts_fact</a></td><td>DateID</td><td>TimeframeStartID</td>
 </tr>
 <tr class="altRow">
-<td><a href="../foreignKeys/Core_AggregatedAmounts_fact_fk_AggregatedAmounts_fact_BeneficialUseCategory.html">fk_AggregatedAmounts_fact_BeneficialUseCategory</a></td><td><a href="../tables/CVs_BeneficialUseCategory.html">CVs.BeneficialUseCategory</a></td><td><a href="../tables/Core_AggregatedAmounts_fact.html">Core.AggregatedAmounts_fact</a></td><td>Name</td><td>PrimaryUseCategoryCV</td>
+<td><a href="../foreignKeys/Core_AggregatedAmounts_fact_fk_AggregatedAmounts_fact_BeneficialUseCategory.html">fk_AggregatedAmounts_fact_BeneficialUseCategory</a></td><td><a href="../tables/CVs_BeneficialUse.html">CVs.BeneficialUse</a></td><td><a href="../tables/Core_AggregatedAmounts_fact.html">Core.AggregatedAmounts_fact</a></td><td>Name</td><td>PrimaryUseCategoryCV</td>
 </tr>
 <tr>
 <td><a href="../foreignKeys/Core_AggregatedAmounts_fact_fk_AggregatedAmounts_fact_CropType.html">fk_AggregatedAmounts_fact_CropType</a></td><td><a href="../tables/CVs_CropType.html">CVs.CropType</a></td><td><a href="../tables/Core_AggregatedAmounts_fact.html">Core.AggregatedAmounts_fact</a></td><td>Name</td><td>CropTypeCV</td>
@@ -231,7 +237,7 @@
 <td><a href="../foreignKeys/Core_AggregatedAmounts_fact_fk_AggregatedAmounts_fact_Organizations_dim.html">fk_AggregatedAmounts_fact_Organizations_dim</a></td><td><a href="../tables/Core_Organizations_dim.html">Core.Organizations_dim</a></td><td><a href="../tables/Core_AggregatedAmounts_fact.html">Core.AggregatedAmounts_fact</a></td><td>OrganizationID</td><td>OrganizationID</td>
 </tr>
 <tr class="altRow">
-<td><a href="../foreignKeys/Core_AggregatedAmounts_fact_fk_AggregatedAmounts_fact_ReportingUnits_dim.html">fk_AggregatedAmounts_fact_ReportingUnits_dim</a></td><td><a href="../tables/Core_ReportingAreas_dim.html">Core.ReportingAreas_dim</a></td><td><a href="../tables/Core_AggregatedAmounts_fact.html">Core.AggregatedAmounts_fact</a></td><td>ReportingAreaID</td><td>ReportingAreaID</td>
+<td><a href="../foreignKeys/Core_AggregatedAmounts_fact_fk_AggregatedAmounts_fact_ReportingUnits_dim.html">fk_AggregatedAmounts_fact_ReportingUnits_dim</a></td><td><a href="../tables/Core_ReportingUnits_dim.html">Core.ReportingUnits_dim</a></td><td><a href="../tables/Core_AggregatedAmounts_fact.html">Core.AggregatedAmounts_fact</a></td><td>ReportingUnitID</td><td>ReportingUnitID</td>
 </tr>
 <tr>
 <td><a href="../foreignKeys/Core_AggregatedAmounts_fact_fk_AggregatedAmounts_fact_ReportYearCV.html">fk_AggregatedAmounts_fact_ReportYearCV</a></td><td><a href="../tables/CVs_ReportYearCV.html">CVs.ReportYearCV</a></td><td><a href="../tables/Core_AggregatedAmounts_fact.html">Core.AggregatedAmounts_fact</a></td><td>Name</td><td>ReportYearCV</td>

@@ -6,7 +6,7 @@
 </header>
 <body>
 <div class="logo">
-<p>WaDE [WaDE2.1_schema.xml]</p>
+<p>WaDE2.0 [WaDE2.01.xml]</p>
 </div>
 <div class="horzMenu">
 <a class="horzMenu" href="../index.html"> Home</a><a class="horzMenu" href="../tables/index.html">Tables</a><a class="horzMenu" href="../schemas/index.html">Schemas</a><a class="horzMenu" href="../diagrams/index.html">Diagrams</a><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a><a class="horzMenu" href="../indexes/index.html">Indexes</a>
@@ -27,46 +27,13 @@
 </td><td class="PkCol"><a href="../columns/Core_Methods_dim_MethodID.html">MethodID</a></td><td class="PkCol">BigInt</td><td class="PkCol"> </td><td class="PkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="PkCol"> </td><td class="PkCol">Internal unique identifierfor each database instance that implements the table</td><td class="PkCol"> </td>
+</td><td class="PkCol"> </td><td class="PkCol">Primary internal key unique identifier for method records.</td><td class="PkCol"> </td>
 </tr>
 <tr class="altRow">
-<td> </td><td><a href="../columns/Core_Methods_dim_MethodUUID.html">MethodUUID</a></td><td>NVarChar(100)</td><td> </td><td> </td><td> </td><td>A unique identifier composed of the OrgID and the method name</td><td> </td>
+<td> </td><td><a href="../columns/Core_Methods_dim_MethodUUID.html">MethodUUID</a></td><td>NVarChar(100)</td><td> </td><td> </td><td> </td><td>Foreign key unique identifier to Methods_dim table.</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Core_Methods_dim_MethodName.html">MethodName</a></td><td>NVarChar(50)</td><td> </td><td> </td><td> </td><td>The name of the method used.</td><td> </td>
-</tr>
-<tr class="altRow">
-<td> </td><td><a href="../columns/Core_Methods_dim_MethodDescription.html">MethodDescription</a></td><td>Text</td><td> </td><td> </td><td> </td><td>A high level description of the method</td><td> </td>
-</tr>
-<tr>
-<td> </td><td><a href="../columns/Core_Methods_dim_MethodNEMILink.html">MethodNEMILink</a></td><td>NVarChar(100)</td><td>
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>A link back to the org's website or other webpage for more information about the method. https://www.nemi.gov/home/</td><td> </td>
-</tr>
-<tr class="altRow">
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Methods_dim_ApplicableResourceTypeCV.html">ApplicableResourceTypeCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">A description of the types of water supply or water use for which the method is used (e.g. surface water, groundwater, storage, consumptive use, withdrawal)</td><td class="FkCol">
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td>
-</tr>
-<tr>
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Methods_dim_MethodTypeCV.html">MethodTypeCV</a></td><td class="FkCol">NVarChar(50)</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Indicator of how the actual amount was determined (i.e. calculated, measured, estimated, or reported).</td><td class="FkCol">
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td>
-</tr>
-<tr class="altRow">
-<td> </td><td><a href="../columns/Core_Methods_dim_DataCoverageValue.html">DataCoverageValue</a></td><td>NVarChar(100)</td><td>
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>An indicator of data coverage (i.e., spatial coverage or completeness of the data)</td><td> </td>
-</tr>
-<tr>
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Methods_dim_DataQualityValueCV.html">DataQualityValueCV</a></td><td class="FkCol">NVarChar(50)</td><td class="FkCol">
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">An indicator of data quality or grading (e.g. fair, good, best, unreported), or using the NEMS data quality grading system.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
@@ -76,6 +43,39 @@
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>An indicator of data confidence, should be a confidence interval (e.g. 90%, 50%, etc.)</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Core_Methods_dim_DataCoverageValue.html">DataCoverageValue</a></td><td>NVarChar(100)</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>An indicator of data coverage (e.g., full, partial, etc.).</td><td> </td>
+</tr>
+<tr class="altRow">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Methods_dim_DataQualityValueCV.html">DataQualityValueCV</a></td><td class="FkCol">NVarChar(50)</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">An indicator of the quality of data or grading (e.g. fair, good, best, unreported), or using the NEMS data quality grading system.</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Core_Methods_dim_MethodDescription.html">MethodDescription</a></td><td>Text</td><td> </td><td> </td><td> </td><td>A high level / general description of the data provided.</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Core_Methods_dim_MethodName.html">MethodName</a></td><td>NVarChar(50)</td><td> </td><td> </td><td> </td><td>The name of the method used by the data provider.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Core_Methods_dim_MethodNEMILink.html">MethodNEMILink</a></td><td>NVarChar(100)</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>A link back to the data provider's website or other webpage for more information about the method (e.g., https://www.nemi.gov/home/).</td><td> </td>
+</tr>
+<tr class="altRow">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Methods_dim_MethodTypeCV.html">MethodTypeCV</a></td><td class="FkCol">NVarChar(50)</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Indicator of how the actual amount value within the data was determined (i.e. calculated, measured, estimated, reported, modeled, etc).</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td>
 </tr>
 </table>
 <br>

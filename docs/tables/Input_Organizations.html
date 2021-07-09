@@ -6,7 +6,7 @@
 </header>
 <body>
 <div class="logo">
-<p>WaDE [WaDE2.1_schema.xml]</p>
+<p>WaDE2.0 [WaDE2.01.xml]</p>
 </div>
 <div class="horzMenu">
 <a class="horzMenu" href="../index.html"> Home</a><a class="horzMenu" href="../tables/index.html">Tables</a><a class="horzMenu" href="../schemas/index.html">Schemas</a><a class="horzMenu" href="../diagrams/index.html">Diagrams</a><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a><a class="horzMenu" href="../indexes/index.html">Indexes</a>
@@ -17,47 +17,44 @@
 </div>
 <h2>Columns</h2>
 <table class="flat">
-<tr>
+<tr class="altRow">
 <td class="header">PK</td><td class="header">Name</td><td class="header">Data Type</td><td class="header">NULL</td><td class="header">Auto</td><td class="header">Default</td><td class="header">Comment</td><td class="header">FK</td>
 </tr>
 <tr>
 <td class="PkCol">
 <p class="boolImg">
 <img src="../images/pkb16.gif"></p>
-</td><td class="PkCol"><a href="../columns/Input_Organizations_OrganizationUUID.html">OrganizationUUID</a></td><td class="PkCol">NVarChar(250)</td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol">A unique identifier assigned to the organization, all uppercase letters, no numbers, no dashes	</td><td class="PkCol"> </td>
+</td><td class="PkCol"><a href="../columns/Input_Organizations_OrganizationUUID.html">OrganizationUUID</a></td><td class="PkCol">NVarChar(250)</td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol">Foreign key unique identifier to Organization_dim table.</td><td class="PkCol"> </td>
 </tr>
 <tr class="altRow">
-<td> </td><td><a href="../columns/Input_Organizations_OrganizationName.html">OrganizationName</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Name corresponding to unique organization ID (i.e. Utah Division of Water Resources)	</td><td> </td>
+<td> </td><td><a href="../columns/Input_Organizations_OrganizationContactEmail.html">OrganizationContactEmail</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Email address for the contact person of the organization.</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Input_Organizations_StateCV.html">StateCV</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>State name where the organization belongs to</td><td> </td>
+<td> </td><td><a href="../columns/Input_Organizations_OrganizationContactName.html">OrganizationContactName</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Name of the contact person for the organization.</td><td> </td>
 </tr>
 <tr class="altRow">
+<td> </td><td><a href="../columns/Input_Organizations_OrganizationDataMappingURL.html">OrganizationDataMappingURL</a></td><td>NVarChar(250)</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>A URL to WaDE GitHub repository page for the provided data.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Input_Organizations_OrganizationName.html">OrganizationName</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Name of the organization (e.g., Utah Division of Water Resources).</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Input_Organizations_OrganizationPhoneNumber.html">OrganizationPhoneNumber</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Phone number for the organization contact person. Include area code.</td><td> </td>
+</tr>
+<tr>
 <td> </td><td><a href="../columns/Input_Organizations_OrganizationPurview.html">OrganizationPurview</a></td><td>NVarChar(250)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>A description of the purview of the agency (i.e. water rights, consumptive use, etc.) </td><td> </td>
-</tr>
-<tr>
-<td> </td><td><a href="../columns/Input_Organizations_OrganizationWebsite.html">OrganizationWebsite</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>A hyperlink back to the organization's website. Include https:// header and trailing forward slash
-</td><td> </td>
+</td><td> </td><td> </td><td>A description of the purview of the agency (e.g., water rights, consumptive use, etc.).</td><td> </td>
 </tr>
 <tr class="altRow">
-<td> </td><td><a href="../columns/Input_Organizations_OrganizationPhoneNumber.html">OrganizationPhoneNumber</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>The organization's phone number for general information. Include area code and hyphens	</td><td> </td>
+<td> </td><td><a href="../columns/Input_Organizations_OrganizationWebsite.html">OrganizationWebsite</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>A hyperlink back to the organization's website. Include https:// header and trailing forward slash.</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Input_Organizations_OrganizationContactName.html">OrganizationContactName</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>First name of a person.
-</td><td> </td>
-</tr>
-<tr class="altRow">
-<td> </td><td><a href="../columns/Input_Organizations_OrganizationContactEmail.html">OrganizationContactEmail</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Title of the contact person.
-</td><td> </td>
-</tr>
-<tr>
-<td> </td><td><a href="../columns/Input_Organizations_DataMappingURL.html">DataMappingURL</a></td><td>NVarChar(250)</td><td>
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>A URL to WaDE GitHb repository page that describes the original data source and the conceptual mapping logic to map it into WaDE schema </td><td> </td>
+<td> </td><td><a href="../columns/Input_Organizations_StateCV.html">StateCV</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>State abbreviation where the organization is.</td><td> </td>
 </tr>
 </table>
 <br>

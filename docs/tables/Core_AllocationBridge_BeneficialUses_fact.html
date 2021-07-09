@@ -6,7 +6,7 @@
 </header>
 <body>
 <div class="logo">
-<p>WaDE [WaDE2.1_schema.xml]</p>
+<p>WaDE2.0 [WaDE2.01.xml]</p>
 </div>
 <div class="horzMenu">
 <a class="horzMenu" href="../index.html"> Home</a><a class="horzMenu" href="../tables/index.html">Tables</a><a class="horzMenu" href="../schemas/index.html">Schemas</a><a class="horzMenu" href="../diagrams/index.html">Diagrams</a><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a><a class="horzMenu" href="../indexes/index.html">Indexes</a>
@@ -39,7 +39,7 @@
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_AllocationBridge_BeneficialUses_fact_BeneficialUseCategoryCV.html">BeneficialUseCategoryCV</a></td><td class="FkCol">NVarChar(250)</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">The state recognized stated purpose for the water right (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
@@ -53,14 +53,14 @@
 <br>
 <h2>Foreign Keys</h2>
 <table class="flat">
-<tr>
+<tr class="altRow">
 <td class="header">Name</td><td class="header">Parent Table</td><td class="header">Child Table</td><td class="header">Parent Columns</td><td class="header">Child Columns</td>
 </tr>
 <tr>
 <td><a href="../foreignKeys/Core_AllocationBridge_BeneficialUses_fact_fk_AllocationBridge_BeneficialUses_fact_AllocationAmounts_fact.html">fk_AllocationBridge_BeneficialUses_fact_AllocationAmounts_fact</a></td><td><a href="../tables/Core_AllocationAmounts_fact.html">Core.AllocationAmounts_fact</a></td><td><a href="../tables/Core_AllocationBridge_BeneficialUses_fact.html">Core.AllocationBridge_BeneficialUses_fact</a></td><td>AllocationAmountID</td><td>AllocationAmountID</td>
 </tr>
 <tr>
-<td><a href="../foreignKeys/Core_AllocationBridge_BeneficialUses_fact_fk_AllocationBridge_BeneficialUses_fact_BeneficialUseCategory.html">fk_AllocationBridge_BeneficialUses_fact_BeneficialUseCategory</a></td><td><a href="../tables/CVs_BeneficialUseCategory.html">CVs.BeneficialUseCategory</a></td><td><a href="../tables/Core_AllocationBridge_BeneficialUses_fact.html">Core.AllocationBridge_BeneficialUses_fact</a></td><td>Name</td><td>BeneficialUseCategoryCV</td>
+<td><a href="../foreignKeys/Core_AllocationBridge_BeneficialUses_fact_fk_AllocationBridge_BeneficialUses_fact_BeneficialUseCategory.html">fk_AllocationBridge_BeneficialUses_fact_BeneficialUseCategory</a></td><td><a href="../tables/CVs_BeneficialUse.html">CVs.BeneficialUse</a></td><td><a href="../tables/Core_AllocationBridge_BeneficialUses_fact.html">Core.AllocationBridge_BeneficialUses_fact</a></td><td>Name</td><td>BeneficialUseCategoryCV</td>
 </tr>
 </table>
 <br>

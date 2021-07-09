@@ -6,7 +6,7 @@
 </header>
 <body>
 <div class="logo">
-<p>WaDE [WaDE2.1_schema.xml]</p>
+<p>WaDE2.0 [WaDE2.01.xml]</p>
 </div>
 <div class="horzMenu">
 <a class="horzMenu" href="../index.html"> Home</a><a class="horzMenu" href="../tables/index.html">Tables</a><a class="horzMenu" href="../schemas/index.html">Schemas</a><a class="horzMenu" href="../diagrams/index.html">Diagrams</a><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a><a class="horzMenu" href="../indexes/index.html">Indexes</a>
@@ -27,52 +27,67 @@
 </td><td class="PkCol"><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryOverlayID.html">RegulatoryOverlayID</a></td><td class="PkCol">BigInt</td><td class="PkCol"> </td><td class="PkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td class="PkCol"> </td><td class="PkCol">Internal unique identifier</td><td class="PkCol"> </td>
+</td><td class="PkCol"> </td><td class="PkCol">Primary key unique identifier to RegulatoryOverlay_dim table.</td><td class="PkCol"> </td>
 </tr>
 <tr class="altRow">
 <td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryOverlayUUID.html">RegulatoryOverlayUUID</a></td><td>NVarChar(250)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>Univeral unique identifer </td><td> </td>
+</td><td> </td><td> </td><td>Foreign key unique identifier to RegulatoryOverlay_dim table.</td><td> </td>
 </tr>
 <tr>
+<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_OversightAgency.html">OversightAgency</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>The name of the agency / governing body providing oversight for the regulation.</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryDescription.html">RegulatoryDescription</a></td><td>BigInt</td><td> </td><td> </td><td> </td><td>A description of the regulation.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryName.html">RegulatoryName</a></td><td>NVarChar(50)</td><td> </td><td> </td><td> </td><td>The name of the regulation.</td><td> </td>
+</tr>
+<tr class="altRow">
 <td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryOverlayNativeID.html">RegulatoryOverlayNativeID</a></td><td>NVarChar(250)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>Native identifier to each data source</td><td> </td>
-</tr>
-<tr class="altRow">
-<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryName.html">RegulatoryName</a></td><td>NVarChar(50)</td><td> </td><td> </td><td> </td><td>The name of the regulation</td><td> </td>
+</td><td> </td><td> </td><td>Unique identifier code / ID used by the data provider to distinguish the regulatory overlay area in the source data.</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryDescription.html">RegulatoryDescription</a></td><td>NVarChar(MAX)</td><td> </td><td> </td><td> </td><td>A description of the regulation. e.g.,This region is subject to addition oversight and development restrictions as dictated by the Groundwater Management Area Act </td><td> </td>
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryOverlayTypeCV.html">RegulatoryOverlayTypeCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">The high level description of the regulatory overlaytype recognized by the data provider.</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td>
 </tr>
 <tr class="altRow">
-<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryStatusCV.html">RegulatoryStatusCV</a></td><td>NVarChar(50)</td><td> </td><td> </td><td> </td><td>Status of the regulation (i.e., whether it is currently initiated/in effect)</td><td> </td>
+<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryStatusCV.html">RegulatoryStatusCV</a></td><td>NVarChar(50)</td><td> </td><td> </td><td> </td><td>Status of the regulation (e.g., initiated, in effect, efc.).</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_OversightAgency.html">OversightAgency</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>The agency/governance body providing oversight for the regulation</td><td> </td>
-</tr>
-<tr class="altRow">
 <td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryStatute.html">RegulatoryStatute</a></td><td>NVarChar(500)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>Legal Statute(s) related to the regulation.e.g., 56-78134 (Utah Code)</td><td> </td>
+</td><td> </td><td> </td><td>Legal statute(s) ID / name related to the regulation (e.g., 56-78134).</td><td> </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_RegulatoryStatuteLink.html">RegulatoryStatuteLink</a></td><td>NVarChar(500)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>A link to the legal statute(s) related to the regulation. e.g., https://le.utah.gov/xcode/code.html</td><td> </td>
-</tr>
-<tr class="altRow">
-<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_StatutoryEffectiveDate.html">StatutoryEffectiveDate</a></td><td>Date</td><td> </td><td> </td><td> </td><td>The start date of the aggregated variable amount. This could be a monthly timestep or a calendar year/water year timestep (e.g., 1/1/2018, 10/1/2017).</td><td> </td>
+</td><td> </td><td> </td><td>A link to the legal statute(s) related to the regulation (e.g., https://le.utah.gov/xcode/code.html).</td><td> </td>
 </tr>
 <tr>
+<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_StatutoryEffectiveDate.html">StatutoryEffectiveDate</a></td><td>Date</td><td> </td><td> </td><td> </td><td>The start date of the legal statute(s) began.  Format of MM/DD/YYYY.</td><td> </td>
+</tr>
+<tr class="altRow">
 <td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_StatutoryEndDate.html">StatutoryEndDate</a></td><td>Date</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>The end date of the aggregated variable amount. This could be a monthly timestep or a calendar year/water year timestep (e.g., 12/31/2018, 9/30/2017</td><td> </td>
+</td><td> </td><td> </td><td>The end date of the legal statute(s) ends.  Format of MM/DD/YYYY.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Core_RegulatoryOverlay_dim_WaterSourceTypeCV.html">WaterSourceTypeCV</a></td><td>NVarChar(100)</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>The high level description of the water source type (e.g., surface water, groundwater, mixed, reuse, etc.)</td><td> </td>
 </tr>
 </table>
 <br>
@@ -82,9 +97,14 @@
 </div>
 <br>
 <h2>Foreign Keys</h2>
-<div class="paragraph">
-<p>(none)</p>
-</div>
+<table class="flat">
+<tr>
+<td class="header">Name</td><td class="header">Parent Table</td><td class="header">Child Table</td><td class="header">Parent Columns</td><td class="header">Child Columns</td>
+</tr>
+<tr>
+<td><a href="../foreignKeys/Core_RegulatoryOverlay_dim_fk_RegulatoryOverlay_dim_RegulatoryOverlayTypeCV.html">fk_RegulatoryOverlay_dim_RegulatoryOverlayTypeCV</a></td><td><a href="../tables/CVs_RegulatoryOverlayTypeCV.html">CVs.RegulatoryOverlayTypeCV</a></td><td><a href="../tables/Core_RegulatoryOverlay_dim.html">Core.RegulatoryOverlay_dim</a></td><td>Name</td><td>RegulatoryOverlayTypeCV</td>
+</tr>
+</table>
 <br>
 <h2>Triggers</h2>
 <div class="paragraph">
@@ -95,6 +115,9 @@
 <table class="flat">
 <tr>
 <td class="header">Diagram Name</td>
+</tr>
+<tr>
+<td><a href="../diagrams/1_WaterAllocations.html">1_WaterAllocations</a></td>
 </tr>
 <tr>
 <td><a href="../diagrams/4_RegulatoryInfo.html">4_RegulatoryInfo</a></td>

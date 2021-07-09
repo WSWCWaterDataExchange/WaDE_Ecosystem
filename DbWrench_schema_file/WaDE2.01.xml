@@ -3416,6 +3416,8 @@ BenificialUseID&#13;
       </positionableLines>
     </FkGl>
     <Notes>
+      <Note bkCl="ffffffe6" x="99" y="122">What: Variable and its metadata</Note>
+      <Note bkCl="ffffffe6" x="26" y="495">How: the method of how water use/diversion was estimated</Note>
       <Note bkCl="ffffffe6" x="393" y="39">SiteVariableData: site specific Use&#13;
 &#13;
 The brown tables are the dimensions tables (look us) that are mostly static over time. &#13;
@@ -3433,8 +3435,6 @@ TimeFrameStartID&#13;
 TimeFrameEndID&#13;
 ReportYearCV</Note>
       <Note bkCl="ffffffe6" x="1051" y="1262">Who: data provider</Note>
-      <Note bkCl="ffffffe6" x="99" y="122">What: Variable and its metadata</Note>
-      <Note bkCl="ffffffe6" x="26" y="495">How: the method of how water use/diversion was estimated</Note>
     </Notes>
     <Zones/>
   </Dgm>
@@ -6073,12 +6073,12 @@ Some tables like the Allocations table might change over time but much slowly</N
     </BasicOptionMgr>
   </DbDocOptionMgr>
   <OpenEditors>
-    <OpenEditor ClsNm="Diagram" fqn="null.1_WaterAllocations" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="null.6_InputTables" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="null.4_RegulatoryInfo" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="null.3_AggregatedAmounts" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="null.5_ContreolledVocabulary" selected="1"/>
-    <OpenEditor ClsNm="Diagram" fqn="null.2_SiteSpecificAmounts" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.1_WaterAllocations" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.6_InputTables" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.4_RegulatoryInfo" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.3_AggregatedAmounts" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.5_ContreolledVocabulary" selected="1"/>
+    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.2_SiteSpecificAmounts" selected="0"/>
   </OpenEditors>
   <TreePaths>
     <TreePath/>

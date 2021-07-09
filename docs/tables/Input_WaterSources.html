@@ -6,7 +6,7 @@
 </header>
 <body>
 <div class="logo">
-<p>WaDE [WaDE2.1_schema.xml]</p>
+<p>WaDE2.0 [WaDE2.01.xml]</p>
 </div>
 <div class="horzMenu">
 <a class="horzMenu" href="../index.html"> Home</a><a class="horzMenu" href="../tables/index.html">Tables</a><a class="horzMenu" href="../schemas/index.html">Schemas</a><a class="horzMenu" href="../diagrams/index.html">Diagrams</a><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a><a class="horzMenu" href="../indexes/index.html">Indexes</a>
@@ -24,34 +24,34 @@
 <td class="PkCol">
 <p class="boolImg">
 <img src="../images/pkb16.gif"></p>
-</td><td class="PkCol"><a href="../columns/Input_WaterSources_WaterSourceUUID.html">WaterSourceUUID</a></td><td class="PkCol">BigInt</td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td>
+</td><td class="PkCol"><a href="../columns/Input_WaterSources_WaterSourceUUID.html">WaterSourceUUID</a></td><td class="PkCol">BigInt</td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol">Foreign key unique identifier to WaterSource_dim table.</td><td class="PkCol"> </td>
 </tr>
 <tr class="altRow">
-<td> </td><td><a href="../columns/Input_WaterSources_WaterSourceNativeID.html">WaterSourceNativeID</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Source id as used in the data provider</td><td> </td>
-</tr>
-<tr>
-<td> </td><td><a href="../columns/Input_WaterSources_WaterSourceName.html">WaterSourceName</a></td><td>NVarChar(250)</td><td>
+<td> </td><td><a href="../columns/Input_WaterSources_Geometry.html">Geometry</a></td><td>Geometry</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>the water source name as in the data provider record</td><td> </td>
-</tr>
-<tr class="altRow">
-<td> </td><td><a href="../columns/Input_WaterSources_WaterSourceTypeCV.html">WaterSourceTypeCV</a></td><td>NVarChar(100)</td><td> </td><td> </td><td> </td><td>The source type(s) of the site-specific variable amount (e.g., surface water, groundwater, mixed sources, reuse, etc.)</td><td> </td>
+</td><td> </td><td> </td><td>The GIS objects / shape written in Well-Known Text (WKT) format.</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Input_WaterSources_WaterQualityIndicatorCV.html">WaterQualityIndicatorCV</a></td><td>NVarChar(100)</td><td> </td><td> </td><td> </td><td>Water quality indicator(s) for the site-specific variable amount such as fresh, saline, mixed quality, etc.</td><td> </td>
-</tr>
-<tr class="altRow">
 <td> </td><td><a href="../columns/Input_WaterSources_GNISFeatureNameCV.html">GNISFeatureNameCV</a></td><td>NVarChar(250)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>The most appropriate Geographic Names Information System (GNIS) identifier for the source location.</td><td> </td>
 </tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Input_WaterSources_WaterQualityIndicatorCV.html">WaterQualityIndicatorCV</a></td><td>NVarChar(100)</td><td> </td><td> </td><td> </td><td>Description of the water quality (e.g., fresh, saline, mixed quality, etc.).</td><td> </td>
+</tr>
 <tr>
-<td> </td><td><a href="../columns/Input_WaterSources_Geometry.html">Geometry</a></td><td>Geometry</td><td>
+<td> </td><td><a href="../columns/Input_WaterSources_WaterSourceName.html">WaterSourceName</a></td><td>NVarChar(250)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td>Well-Known Text (WKT): The GIS objects supported by PostGIS are a superset of the "Simple Features" defined by the OpenGIS Consortium (OGC). PostGIS supports all the objects and functions specified in the OGC "Simple Features for SQL" specification.</td><td> </td>
+</td><td> </td><td> </td><td>The water source name as recognized by the data provider.</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Input_WaterSources_WaterSourceNativeID.html">WaterSourceNativeID</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>The water source native ID used by the data provider.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Input_WaterSources_WaterSourceTypeCV.html">WaterSourceTypeCV</a></td><td>NVarChar(100)</td><td> </td><td> </td><td> </td><td>The high level description of the water source type (e.g., surface water, groundwater, mixed, reuse, etc.)</td><td> </td>
 </tr>
 </table>
 <br>

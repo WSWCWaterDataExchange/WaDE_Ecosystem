@@ -1,0 +1,95 @@
+<HTML>
+<header>
+<title>ReportingUnits - Table</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+</header>
+<body>
+<div class="logo">
+<p>WaDE2.0 [WaDE2.01.xml]</p>
+</div>
+<div class="horzMenu">
+<a class="horzMenu" href="../index.html"> Home</a><a class="horzMenu" href="../tables/index.html">Tables</a><a class="horzMenu" href="../schemas/index.html">Schemas</a><a class="horzMenu" href="../diagrams/index.html">Diagrams</a><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a><a class="horzMenu" href="../indexes/index.html">Indexes</a>
+</div>
+<h1>Table: ReportingUnits</h1>
+<div class="paragraph">
+<p>The Area for which the Allocation or Estimate is being reported</p>
+</div>
+<h2>Columns</h2>
+<table class="flat">
+<tr>
+<td class="header">PK</td><td class="header">Name</td><td class="header">Data Type</td><td class="header">NULL</td><td class="header">Auto</td><td class="header">Default</td><td class="header">Comment</td><td class="header">FK</td>
+</tr>
+<tr>
+<td class="PkCol">
+<p class="boolImg">
+<img src="../images/pkb16.gif"></p>
+</td><td class="PkCol"><a href="../columns/Input_ReportingUnits_ReportingAreaUUID.html">ReportingAreaUUID</a></td><td class="PkCol">NVarChar(200)</td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol">Foreign key unique identifier to ReportingUnits_dim table.</td><td class="PkCol"> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Input_ReportingUnits_EPSGCodeCV.html">EPSGCodeCV</a></td><td>NVarChar(50)</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>EPSG Code for projection used for WaDE (e.g.,  EPSG:4326).</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Input_ReportingUnits_Geometry.html">Geometry</a></td><td>Geometry</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>The GIS objects / shape written in Well-Known Text (WKT) format.</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Input_ReportingUnits_ReportingAreaName.html">ReportingAreaName</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Recognized name of the data reporting area by the data provider.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Input_ReportingUnits_ReportingAreaNativeID.html">ReportingAreaNativeID</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Unique identifier code / ID used by the data provider to distinguish the reporting area in the source data set.</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Input_ReportingUnits_ReportingAreaProductVersion.html">ReportingAreaProductVersion</a></td><td>NVarChar(100)</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>The product version of the reporting area (e.g., ver 1, 2, etc).  Similar to ReportingUnitTypeCV.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Input_ReportingUnits_ReportingAreaTypeCV.html">ReportingAreaTypeCV</a></td><td>NVarChar(20)</td><td> </td><td> </td><td> </td><td>The high level description of the reporting area type recognized by the data provider (e.g., HUC, County, Basin, etc.).</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/Input_ReportingUnits_ReportingAreaUpdateDate.html">ReportingAreaUpdateDate</a></td><td>Date</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>Date that the ReportingUnitProductVersion was released.</td><td> </td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/Input_ReportingUnits_StateCV.html">StateCV</a></td><td>NVarChar(50)</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>Two digit state abbreviation where the data site is.</td><td> </td>
+</tr>
+</table>
+<br>
+<h2>Indexes</h2>
+<div class="paragraph">
+<p>(none)</p>
+</div>
+<br>
+<h2>Foreign Keys</h2>
+<div class="paragraph">
+<p>(none)</p>
+</div>
+<br>
+<h2>Triggers</h2>
+<div class="paragraph">
+<p>(none)</p>
+</div>
+<br>
+<h2>Used in Diagrams</h2>
+<table class="flat">
+<tr>
+<td class="header">Diagram Name</td>
+</tr>
+<tr>
+<td><a href="../diagrams/6_InputTables.html">6_InputTables</a></td>
+</tr>
+</table>
+</body>
+</HTML>

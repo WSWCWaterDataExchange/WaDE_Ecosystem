@@ -6,7 +6,7 @@
 </header>
 <body>
 <div class="logo">
-<p>WaDE [WaDE2.1_schema.xml]</p>
+<p>WaDE2.0 [WaDE2.01.xml]</p>
 </div>
 <div class="horzMenu">
 <a class="horzMenu" href="../index.html"> Home</a><a class="horzMenu" href="../tables/index.html">Tables</a><a class="horzMenu" href="../schemas/index.html">Schemas</a><a class="horzMenu" href="../diagrams/index.html">Diagrams</a><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a><a class="horzMenu" href="../indexes/index.html">Indexes</a>
@@ -21,19 +21,16 @@
 <td class="header">PK</td><td class="header">Name</td><td class="header">Data Type</td><td class="header">NULL</td><td class="header">Auto</td><td class="header">Default</td><td class="header">Comment</td><td class="header">FK</td>
 </tr>
 <tr>
-<td class="PkCol">
-<p class="boolImg">
-<img src="../images/pkb16.gif"></p>
-</td><td class="PkCol"><a href="../columns/Input_RegulatoryReportingUnits_RegulatoryOverlayUUID.html">RegulatoryOverlayUUID</a></td><td class="PkCol">BigInt</td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td>
+<td> </td><td><a href="../columns/Input_RegulatoryReportingUnits_RegulatoryOverlayUUID.html">RegulatoryOverlayUUID</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Foreign key unique identifier to RegulatoryOverlay_dim table.</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Input_RegulatoryReportingUnits_RegulatoryName.html">RegulatoryName</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td> RegulatoryOverlay</td><td> </td>
+<td> </td><td><a href="../columns/Input_RegulatoryReportingUnits_DataPublicationDate.html">DataPublicationDate</a></td><td>Date</td><td> </td><td> </td><td> </td><td>Date that this data was published by the data provider to the public.</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Input_RegulatoryReportingUnits_ReportingUnitNativeID.html">ReportingUnitNativeID</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>foreign key unique identifierto reporting unit</td><td> </td>
+<td> </td><td><a href="../columns/Input_RegulatoryReportingUnits_OrganizationUUID.html">OrganizationUUID</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Foreign key unique identifier to Organization_dim table.</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/Input_RegulatoryReportingUnits_DataPublicationDateID.html">DataPublicationDateID</a></td><td>Date</td><td> </td><td> </td><td> </td><td> </td><td> </td>
+<td> </td><td><a href="../columns/Input_RegulatoryReportingUnits_ReportingUnitUUID.html">ReportingUnitUUID</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Foreign key unique identifier to ReportingUnits_dim table.</td><td> </td>
 </tr>
 </table>
 <br>

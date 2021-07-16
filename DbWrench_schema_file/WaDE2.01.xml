@@ -9,15 +9,15 @@
       <Pk ClNs="AggBridgeID" nm="pkAggBridge_BeneficialUses_fact"/>
       <Cl au="1" df="" nm="AggBridgeID" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Internal unique identifier integer</Cm>
+        <Cm>Primary internal key unique identifier for the bridge table between beneficial use and aggregated amounts tables.</Cm>
       </Cl>
       <Cl au="1" df="" nm="AggregatedAmountID" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Foreign key identifier for the aggregated variable amount</Cm>
+        <Cm>Primary internal key unique identifier for aggregated amount records.</Cm>
       </Cl>
       <Cl au="0" df="" nm="BeneficialUseCategoryCV" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
-        <Cm>The state recognized stated purpose for the water allocation (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
+        <Cm>The data provider's recognized stated purpose for the water right (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
       </Cl>
       <Fk deAc="3" nm="fk_AggBridge_BeneficialUses_fact_AggregatedAmounts_fact" prLkCl="AggregatedAmountID" upAc="3">
         <PrTb mn="0" nm="AggregatedAmounts_fact" oe="1" sch="Core" zr="0"/>
@@ -210,17 +210,17 @@
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
         <Cm>Primary key unique identifier for allocation records.</Cm>
       </Cl>
+      <Cl au="0" df="" nm="MethodID" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Primary internal key unique identifier for method records.</Cm>
+      </Cl>
       <Cl au="0" df="" nm="OrganizationID" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Foreign key unique identifier to Organization_dim table.</Cm>
+        <Cm>Primary internal key unique identifier for organization records.</Cm>
       </Cl>
       <Cl au="0" df="" nm="VariableSpecificID" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Foreign key unique identifier to Variables_dim table.</Cm>
-      </Cl>
-      <Cl au="0" df="" nm="MethodID" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Foreign key unique identifier to Methods_dim table.</Cm>
+        <Cm>Primary internal key unique identifier for variable records.</Cm>
       </Cl>
       <Cl au="0" df="" nm="AllocationApplicationDateID" nu="1">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
@@ -427,15 +427,15 @@
       <Pk ClNs="AllocationBridgeID" nm="pkAllocationBridge_BeneficialUses_fact"/>
       <Cl au="1" df="" nm="AllocationBridgeID" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Internal unique identifier integer</Cm>
+        <Cm>Primary internal key unique identifier for the bridge table between beneficial uses and allocation amount tables.</Cm>
       </Cl>
       <Cl au="0" df="" nm="AllocationAmountID" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Foreign key identifier for the allocation amount</Cm>
+        <Cm>Primary internal key unique identifier for allocation records.</Cm>
       </Cl>
       <Cl au="0" df="" nm="BeneficialUseCategoryCV" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
-        <Cm>The state recognized stated purpose for the water right (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
+        <Cm>The data provider's recognized stated purpose for the water right (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
       </Cl>
       <Fk deAc="3" nm="fk_AllocationBridge_BeneficialUses_fact_AllocationAmounts_fact" prLkCl="AllocationAmountID" upAc="3">
         <PrTb mn="0" nm="AllocationAmounts_fact" oe="1" sch="Core" zr="0"/>
@@ -496,13 +496,13 @@ examples: Underground Water Claim, Federal Reserved Water Right
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
         <Cm>If the allocation is temporary, add the expiration date</Cm>
       </Cl>
-      <Cl au="0" df="" nm="TimeframeEnd" nu="1">
-        <DT arr="0" ds="NChar" en="" id="722" ln="5" sc="null" sg="1" un="0"/>
-        <Cm>MM/DD</Cm>
+      <Cl au="0" df="" nm="AllocationTimeframeEnd" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>End date when the water right no longer can legally access the assigned water.  Format of MM/DD.</Cm>
       </Cl>
-      <Cl au="0" df="" nm="TimeframeStart" nu="1">
-        <DT arr="0" ds="NChar" en="" id="722" ln="5" sc="null" sg="1" un="0"/>
-        <Cm>MM/DD</Cm>
+      <Cl au="0" df="" nm="AllocationTimeframeStart" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Start date when the water right can legally access the assigned water.  Format of MM/DD.</Cm>
       </Cl>
       <Cl au="0" df="" nm="AllocationChangeApplicationIndicator" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
@@ -590,10 +590,11 @@ examples: Underground Water Claim, Federal Reserved Water Right
       <Pk ClNs="DateID" nm="pkDate_dim"/>
       <Cl au="1" df="" nm="DateID" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Primary internal key unique identifier for date records.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Date" nu="0">
         <DT arr="0" ds="Date" en="" id="91" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Date</Cm>
+        <Cm>Date in YYYY-MM-DD format.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Year" nu="1">
         <DT arr="0" ds="NChar" en="" id="722" ln="4" sc="null" sg="1" un="0"/>
@@ -719,17 +720,19 @@ examples: Underground Water Claim, Federal Reserved Water Right
       </Cl>
       <Cl au="0" df="" nm="PODSiteID" nu="1">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Internal unique identifier integer</Cm>
+        <Cm>Primary internal key unique identifier for POD site records from the site table.</Cm>
       </Cl>
       <Cl au="0" df="" nm="POUSiteID" nu="1">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Internal unique identifier integer</Cm>
+        <Cm>Primary internal key unique identifier for POU site records from the site table.</Cm>
       </Cl>
       <Cl au="0" df="" nm="StartDate" nu="0">
         <DT arr="0" ds="Date" en="" id="91" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Start date when the water right can legally access the assigned water.  Format of MM/DD.</Cm>
       </Cl>
       <Cl au="0" df="" nm="EndDate" nu="0">
         <DT arr="0" ds="Date" en="" id="91" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>End date when the water right no longer can legally access the assigned water.  Format of MM/DD.</Cm>
       </Cl>
       <Fk deAc="3" nm="fk_PODSite_POUSite_fact_Sites_dim_POD" prLkCl="SiteID" upAc="3">
         <PrTb mn="0" nm="Sites_dim" oe="1" sch="Core" zr="1"/>
@@ -811,7 +814,8 @@ examples: Underground Water Claim, Federal Reserved Water Right
       <TblOpts/>
       <Pk ClNs="RegulatoryOverlayBridgeID" nm="pkRegulatoryOverlayBridge_Sites_fact"/>
       <Cl au="0" df="" nm="RegulatoryOverlayBridgeID" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Primary internal key unique identifier for the bridge table between regulatory overlays and sites tables.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SiteID" nu="1">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
@@ -1111,7 +1115,7 @@ examples: Underground Water Claim, Federal Reserved Water Right
       <Pk ClNs="SiteBridgeID" nm="pkSitesBridge_BeneficialUses_fact"/>
       <Cl au="0" df="" nm="SiteBridgeID" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>Internal unique identifier integer</Cm>
+        <Cm>Primary internal key unique identifier for the bridge table between sites variable amounts and beneficial use tables.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SiteVariableAmountID" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
@@ -1119,6 +1123,7 @@ examples: Underground Water Claim, Federal Reserved Water Right
       </Cl>
       <Cl au="0" df="" nm="BeneficialUseCV" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>The state recognized stated purpose for the water allocation (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
       </Cl>
       <Fk deAc="3" nm="fk_SitesBridge_BeneficialUses_fact_BeneficialUseCategory" prLkCl="Name" upAc="3">
         <PrTb mn="0" nm="BeneficialUse" oe="1" sch="CVs" zr="1"/>
@@ -1138,6 +1143,7 @@ examples: Underground Water Claim, Federal Reserved Water Right
       <Pk ClNs="SitesVariableAmountAllocationsID" nm="pkSitesVariableAmountBridgeAllocations_fact"/>
       <Cl au="0" df="" nm="SitesVariableAmountAllocationsID" nu="0">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Primary internal key unique identifier for the bridge table between sites and aggregated amounts tables.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SiteVariableAmountID" nu="1">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
@@ -1587,19 +1593,27 @@ END</src>
       <Pk ClNs="Name" nm="pkAggregationStatistic"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
-        <Cm>	</Cm>
+        <Cm>	Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="State" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="State" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1611,18 +1625,27 @@ END</src>
       <Pk ClNs="Name" nm="pkApplicableResourceType"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar(MAX)" en="" id="729" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="State" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="State" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -1651,9 +1674,9 @@ END</src>
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
         <Cm>Two digit state abbreviation where the beneficial use was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
-      <Cl au="0" df="" nm="Term" nu="0">
+      <Cl au="0" df="" nm="Term" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
-        <Cm>Related USGS beneficial use category from the USGS controlled vocabulary (e.g. irrigation, municipal, etc.).</Cm>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="USGSCategoryCV" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
@@ -1679,18 +1702,27 @@ END</src>
       <Pk ClNs="Name&#9;" nm="pkCoordinateMethod"/>
       <Cl au="0" df="" nm="Name&#9;" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar(MAX)" en="" id="729" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -1701,18 +1733,27 @@ END</src>
       <Pk ClNs="Name" nm="pkCropType"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1725,18 +1766,27 @@ END</src>
       <Pk ClNs="Name" nm="pkCustomerTypeCV"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -1749,16 +1799,24 @@ END</src>
         <Cm>An indicator of data quality or grading (e.g. fair, good, best, unreported), or using the NEMS data quality grading system.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar(MAX)" en="" id="729" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="10" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -1769,18 +1827,27 @@ END</src>
       <Pk ClNs="Name" nm="pkEPSGCode"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1793,18 +1860,27 @@ END</src>
       <Pk ClNs="Name" nm="pkGNISFeatureName"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1817,18 +1893,28 @@ END</src>
       <Pk ClNs="Name" nm="pkIrrigationMethod"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.
+</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1841,18 +1927,27 @@ END</src>
       <Pk ClNs="Name" nm="pkLegalStatus"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1865,18 +1960,28 @@ END</src>
       <Pk ClNs="Name" nm="pkLivestockSpecies"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.
+</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -1887,18 +1992,27 @@ END</src>
       <Pk ClNs="Name" nm="pkMethodType"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1911,18 +2025,27 @@ END</src>
       <Pk ClNs="Name" nm="pkNAICSCode"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar(MAX)" en="" id="729" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1935,18 +2058,27 @@ END</src>
       <Pk ClNs="Name" nm="pkNHDNetworkStatus"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1959,18 +2091,27 @@ END</src>
       <Pk ClNs="Name" nm="pkNHDProduct"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -1983,18 +2124,26 @@ END</src>
       <Pk ClNs="Name" nm="pkLivestockSpecies_dup"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -2005,18 +2154,27 @@ END</src>
       <Pk ClNs="Name" nm="pkPowerType"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -2026,21 +2184,27 @@ END</src>
       <Pk ClNs="Name" nm="pkRegulatoryOverlayTypeCV"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURL" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
       </Cl>
       <Cl au="0" df="" nm="WaDEName" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -2051,19 +2215,27 @@ END</src>
       <Pk ClNs="Name" nm="pkRegulatoryStatus"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="State" nu="1">
-        <DT arr="0" ds="NChar" en="" id="722" ln="2" sc="null" sg="1" un="0"/>
-        <Cm>State identifier</Cm>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="State" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2076,18 +2248,27 @@ END</src>
       <Pk ClNs="Name" nm="pkReportingUnitType"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2099,19 +2280,28 @@ END</src>
       <TblOpts/>
       <Pk ClNs="Name" nm="pkReportYearCV"/>
       <Cl au="0" df="" nm="Name" nu="0">
-        <DT arr="0" ds="NChar" en="" id="722" ln="4" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar(MAX)" en="" id="729" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2124,18 +2314,27 @@ END</src>
       <Pk ClNs="Name" nm="pkReportYearType"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="10" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2148,18 +2347,27 @@ END</src>
       <Pk ClNs="Name" nm="pkSDWISIdentifier"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2171,18 +2379,31 @@ END</src>
       <Pk ClNs="Name" nm="pkSiteType"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar(MAX)" en="" id="729" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="Definition" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -2191,19 +2412,32 @@ END</src>
       <TblOpts/>
       <Pk ClNs="Name" nm="pkStates"/>
       <Cl au="0" df="" nm="Name" nu="0">
-        <DT arr="0" ds="NChar" en="" id="722" ln="5" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="Name" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="2" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="10" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="10" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -2214,18 +2448,27 @@ END</src>
       <Pk ClNs="Name" nm="pkUnits"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2238,18 +2481,31 @@ END</src>
       <Pk ClNs="Name" nm="pkUSGSCategory"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar(MAX)" en="" id="729" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="Definition" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2262,18 +2518,27 @@ END</src>
       <Pk ClNs="Name" nm="pkVariable"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2286,18 +2551,27 @@ END</src>
       <Pk ClNs="Name" nm="pkVariableSpecific"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2310,19 +2584,35 @@ END</src>
       <Pk ClNs="Name" nm="pkWaterAllocationBasis"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="State" nu="1">
-        <DT arr="0" ds="NChar" en="" id="722" ln="2" sc="null" sg="1" un="0"/>
-        <Cm>State identifier</Cm>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar(MAX)" en="" id="729" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="Definition" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="State" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="State" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2335,18 +2625,35 @@ END</src>
       <Pk ClNs="Name" nm="pkWaterAllocationType"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="State" nu="1">
-        <DT arr="0" ds="NChar" en="" id="722" ln="2" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar(MAX)" en="" id="729" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="Definition" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="State" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="State" nu="1">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2359,18 +2666,27 @@ END</src>
       <Pk ClNs="Name" nm="pkWaterQualityIndicator"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2383,18 +2699,27 @@ END</src>
       <Pk ClNs="Name" nm="pkWaterSourceType"/>
       <Cl au="0" df="" nm="Name" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Term" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="Definition" nu="1">
-        <DT arr="0" ds="NVarChar" en="" id="724" ln="5000" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="4000" sc="null" sg="1" un="0"/>
+        <Cm>Definition of the term as noted from the data provider from the source data.</Cm>
       </Cl>
       <Cl au="0" df="" nm="State" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</Cm>
       </Cl>
       <Cl au="0" df="" nm="SourceVocabularyURI&#9;" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
+        <Cm>Web link to source glossary / index of where the data provider provides the term and it's definition.</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="WaDEName" nu="1">
+        <DT arr="0" ds="NVarChar" en="" id="724" ln="150" sc="null" sg="1" un="0"/>
+        <Cm>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis>
@@ -2436,7 +2761,7 @@ END</src>
       </Cl>
       <Cl au="0" df="" nm="BeneficialUseCategoryCV" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="500" sc="null" sg="1" un="0"/>
-        <Cm>The state recognized stated purpose for the water allocation (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
+        <Cm>The data provider's recognized stated purpose for the water right (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
       </Cl>
       <Cl au="0" df="" nm="CommunityWaterSupplySystem" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
@@ -2857,7 +3182,7 @@ END</src>
       </Cl>
       <Cl au="0" df="" nm="BeneficialUseCategoryCV" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="500" sc="null" sg="1" un="0"/>
-        <Cm>The state recognized stated purpose for the water allocation (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
+        <Cm>The data provider's recognized stated purpose for the water right (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
       </Cl>
       <Cl au="0" df="" nm="CommunityWaterSupplySystem" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
@@ -3065,7 +3390,7 @@ END</src>
       </Cl>
       <Cl au="0" df="" nm="BeneficialUseCategoryCV" nu="0">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
-        <Cm>The state recognized stated purpose for the water right (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
+        <Cm>The data provider's recognized stated purpose for the water right (e.g., irrigation, power, etc) (if multiple, provide as a comma separated list).</Cm>
       </Cl>
       <Cl au="0" df="" nm="CommunityWaterSupplySystem" nu="1">
         <DT arr="0" ds="NVarChar" en="" id="724" ln="250" sc="null" sg="1" un="0"/>
@@ -3416,8 +3741,6 @@ BenificialUseID&#13;
       </positionableLines>
     </FkGl>
     <Notes>
-      <Note bkCl="ffffffe6" x="99" y="122">What: Variable and its metadata</Note>
-      <Note bkCl="ffffffe6" x="26" y="495">How: the method of how water use/diversion was estimated</Note>
       <Note bkCl="ffffffe6" x="393" y="39">SiteVariableData: site specific Use&#13;
 &#13;
 The brown tables are the dimensions tables (look us) that are mostly static over time. &#13;
@@ -3435,6 +3758,8 @@ TimeFrameStartID&#13;
 TimeFrameEndID&#13;
 ReportYearCV</Note>
       <Note bkCl="ffffffe6" x="1051" y="1262">Who: data provider</Note>
+      <Note bkCl="ffffffe6" x="99" y="122">What: Variable and its metadata</Note>
+      <Note bkCl="ffffffe6" x="26" y="495">How: the method of how water use/diversion was estimated</Note>
     </Notes>
     <Zones/>
   </Dgm>
@@ -6056,6 +6381,30 @@ Some tables like the Allocations table might change over time but much slowly</N
     <RnmCh ObjCls="Column" ParCls="Table" ParNme="BeneficialUse" SupCls="Schema" SupNme="CVs">
       <Rnm nNm="WaDEName" oNm="WaDEBeneficialUse"/>
     </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="Allocations_dim" SupCls="Schema" SupNme="Core">
+      <Rnm nNm="AllocationTimeframeStart" oNm="TimeframeStart"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="Allocations_dim" SupCls="Schema" SupNme="Core">
+      <Rnm nNm="AllocationTimeframeEnd" oNm="TimeframeEnd"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="GNISFeatureName" SupCls="Schema" SupNme="CVs">
+      <Rnm nNm="WaDEName" oNm="WaDEName "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="IrrigationMethod" SupCls="Schema" SupNme="CVs">
+      <Rnm nNm="WaDEName" oNm="WaDEName "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="LegalStatus" SupCls="Schema" SupNme="CVs">
+      <Rnm nNm="WaDEName" oNm="WaDEName "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="EPSGCode" SupCls="Schema" SupNme="CVs">
+      <Rnm nNm="WaDEName" oNm="WaDEName "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="DataQualityValue" SupCls="Schema" SupNme="CVs">
+      <Rnm nNm="WaDEName" oNm="WaDEName "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="CustomerTypeCV" SupCls="Schema" SupNme="CVs">
+      <Rnm nNm="WaDEName" oNm="WaDEName "/>
+    </RnmCh>
   </RnmMgr>
   <DbDocOptionMgr>
     <BasicOptionMgr>
@@ -6073,20 +6422,18 @@ Some tables like the Allocations table might change over time but much slowly</N
     </BasicOptionMgr>
   </DbDocOptionMgr>
   <OpenEditors>
-    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.1_WaterAllocations" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.6_InputTables" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.4_RegulatoryInfo" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.3_AggregatedAmounts" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.5_ContreolledVocabulary" selected="1"/>
-    <OpenEditor ClsNm="Diagram" fqn="WaDE2.0.2_SiteSpecificAmounts" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.3_AggregatedAmounts" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.1_WaterAllocations" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.5_ContreolledVocabulary" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.6_InputTables" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.4_RegulatoryInfo" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.2_SiteSpecificAmounts" selected="0"/>
   </OpenEditors>
   <TreePaths>
     <TreePath/>
     <TreePath>/Schemas (3)</TreePath>
-    <TreePath>/Schemas (3)/Core</TreePath>
-    <TreePath>/Schemas (3)/Core/Tables (22)</TreePath>
-    <TreePath>/Schemas (3)/Core/Tables (22)/RegulatoryReportingUnits_fact</TreePath>
-    <TreePath>/Diagrams (6)</TreePath>
+    <TreePath>/Schemas (3)/CVs</TreePath>
+    <TreePath>/Schemas (3)/CVs/Tables (34)</TreePath>
   </TreePaths>
   <SqlTexts/>
 </Db>

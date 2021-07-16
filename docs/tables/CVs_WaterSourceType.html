@@ -24,28 +24,34 @@
 <td class="PkCol">
 <p class="boolImg">
 <img src="../images/pkb16.gif"></p>
-</td><td class="PkCol"><a href="../columns/CVs_WaterSourceType_Name.html">Name</a></td><td class="PkCol">NVarChar(100)</td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td>
+</td><td class="PkCol"><a href="../columns/CVs_WaterSourceType_Name.html">Name</a></td><td class="PkCol">NVarChar(100)</td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol">Internal unique identifier string used for term name.  Name / listing of the term as noted from the data provider from the source data.</td><td class="PkCol"> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/CVs_WaterSourceType_Term.html">Term</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td>Unique string of the term. Name / listing of the term as noted from the data provider from the source data.</td><td> </td>
 </tr>
 <tr>
-<td> </td><td><a href="../columns/CVs_WaterSourceType_Term.html">Term</a></td><td>NVarChar(250)</td><td> </td><td> </td><td> </td><td> </td><td> </td>
-</tr>
-<tr>
-<td> </td><td><a href="../columns/CVs_WaterSourceType_Definition.html">Definition</a></td><td>NVarChar(5000)</td><td>
+<td> </td><td><a href="../columns/CVs_WaterSourceType_Definition.html">Definition</a></td><td>NVarChar(4000)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td> </td><td> </td>
+</td><td> </td><td> </td><td>Definition of the term as noted from the data provider from the source data.</td><td> </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td> </td><td><a href="../columns/CVs_WaterSourceType_State.html">State</a></td><td>NVarChar(250)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td> </td><td> </td>
+</td><td> </td><td> </td><td>Two digit state abbreviation where the term was provided from. If multiple, use comma separated list.</td><td> </td>
 </tr>
 <tr>
 <td> </td><td><a href="../columns/CVs_WaterSourceType_SourceVocabularyURI_.html">SourceVocabularyURI	</a></td><td>NVarChar(250)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
-</td><td> </td><td> </td><td> </td><td> </td>
+</td><td> </td><td> </td><td>Web link to source glossary / index of where the data provider provides the term and it's definition.</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/CVs_WaterSourceType_WaDEName.html">WaDEName</a></td><td>NVarChar(150)</td><td>
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td> </td><td> </td><td>WaDE specific term used to group and categorize similar beneficial uses and facilitate data visualizations and queries across state boundaries.</td><td> </td>
 </tr>
 </table>
 <br>

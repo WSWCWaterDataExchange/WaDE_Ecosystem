@@ -3608,7 +3608,7 @@ BenificialUseID&#13;
     <Zones/>
   </Dgm>
   <Dgm nm="2_SiteSpecificAmounts">
-    <RnCf ClkAct="false" FtSz="14" lkStgy="RightAngleStrategy" zm="0.75">
+    <RnCf ClkAct="false" FtSz="14" lkStgy="RightAngleStrategy" zm="1.0">
       <VbCfg>
         <Fg ky="Auto Number" vl="0"/>
         <Fg ky="Check" vl="0"/>
@@ -3714,18 +3714,6 @@ BenificialUseID&#13;
       </positionableLines>
     </FkGl>
     <Notes>
-      <Note bkCl="ffffffe6" x="1330" y="601">What: Variable and its metadata</Note>
-      <Note bkCl="ffffffe6" x="27" y="236">How: the method of how water use/diversion was estimated</Note>
-      <Note bkCl="ffffff99" x="31" y="1482">Sites, Water Souces, Amounts:&#13;
-1. A site (city) may receive water from many different sources. &#13;
-2. A water source may supply many sites.&#13;
-3. For each site, there is a time series of reported water use per water source </Note>
-      <Note bkCl="ffffff99" x="32" y="579">Related sites:&#13;
-1. A site may represent a Place of Use (POU) that recieves&#13;
-water from many Points of Diversions (PODs). &#13;
-2. The POU site may have multiple time series reporting water&#13;
-use for different categories. &#13;
-3. Each POD site may have a time series of withdrawals</Note>
       <Note bkCl="ffffffe6" x="393" y="20">SiteVariableData: site specific Use&#13;
 &#13;
 The brown tables are the dimensions tables (look us) that are mostly static over time. &#13;
@@ -3743,6 +3731,18 @@ TimeFrameStartID&#13;
 TimeFrameEndID&#13;
 ReportYearCV</Note>
       <Note bkCl="ffffffe6" x="1193" y="1204">Who: data provider</Note>
+      <Note bkCl="ffffffe6" x="1330" y="601">What: Variable and its metadata</Note>
+      <Note bkCl="ffffffe6" x="27" y="236">How: the method of how water use/diversion was estimated</Note>
+      <Note bkCl="ffffff99" x="31" y="1482">Sites, Water Souces, Amounts:&#13;
+1. A site (city) may receive water from many different sources. &#13;
+2. A water source may supply many sites.&#13;
+3. For each site, there is a time series of reported water use per water source </Note>
+      <Note bkCl="ffffff99" x="32" y="579">Related sites:&#13;
+1. A site may represent a Place of Use (POU) that recieves&#13;
+water from many Points of Diversions (PODs). &#13;
+2. The POU site may have multiple time series reporting water&#13;
+use for different categories. &#13;
+3. Each POD site may have a time series of withdrawals</Note>
     </Notes>
     <Zones/>
   </Dgm>
@@ -6415,11 +6415,11 @@ Some tables like the Allocations table might change over time but much slowly</N
     </BasicOptionMgr>
   </DbDocOptionMgr>
   <OpenEditors>
-    <OpenEditor ClsNm="Diagram" fqn="null.3_AggregatedAmounts" selected="1"/>
     <OpenEditor ClsNm="Diagram" fqn="null.6_InputTables" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="null.2_SiteSpecificAmounts" selected="0"/>
-    <OpenEditor ClsNm="Diagram" fqn="null.4_RegulatoryInfo" selected="0"/>
     <OpenEditor ClsNm="Diagram" fqn="null.1_WaterAllocations" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.2_SiteSpecificAmounts" selected="1"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.4_RegulatoryInfo" selected="0"/>
+    <OpenEditor ClsNm="Diagram" fqn="null.3_AggregatedAmounts" selected="0"/>
   </OpenEditors>
   <TreePaths>
     <TreePath/>

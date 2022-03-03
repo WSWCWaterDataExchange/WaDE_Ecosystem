@@ -179,96 +179,93 @@
 <td><a href="../foreignKeys/Core_Sites_dim_fk_Sites_dim_States.html">fk_Sites_dim_States</a></td><td><a href="../tables/CVs_States.html">CVs.States</a></td><td><a href="../tables/Core_Sites_dim.html">Core.Sites_dim</a></td><td>Name</td><td>StateCV</td>
 </tr>
 <tr>
-<td><a href="../foreignKeys/Core_Sites_dim_fk_Sites_dim_WaterSources_dim.html">fk_Sites_dim_WaterSources_dim</a></td><td><a href="../tables/Core_WaterSources_dim.html">Core.WaterSources_dim</a></td><td><a href="../tables/Core_Sites_dim.html">Core.Sites_dim</a></td><td>WaterSourceID</td><td>WaterSourceID</td>
-</tr>
-<tr class="altRow">
 <td><a href="../foreignKeys/Core_SitesAllocationAmountsBridge_fact_fk_SitesAllocationAmountsBridge_fact_AllocationAmounts_fact.html">fk_SitesAllocationAmountsBridge_fact_AllocationAmounts_fact</a></td><td><a href="../tables/Core_AllocationAmounts_fact.html">Core.AllocationAmounts_fact</a></td><td><a href="../tables/Core_SitesAllocationAmountsBridge_fact.html">Core.SitesAllocationAmountsBridge_fact</a></td><td>AllocationAmountID</td><td>AllocationAmountID</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_SitesAllocationAmountsBridge_fact_fk_SitesAllocationAmountsBridge_fact_Sites_dim.html">fk_SitesAllocationAmountsBridge_fact_Sites_dim</a></td><td><a href="../tables/Core_Sites_dim.html">Core.Sites_dim</a></td><td><a href="../tables/Core_SitesAllocationAmountsBridge_fact.html">Core.SitesAllocationAmountsBridge_fact</a></td><td>SiteID</td><td>SiteID</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_SitesBridge_BeneficialUses_fact_fk_SitesBridge_BeneficialUses_fact_BeneficialUseCategory.html">fk_SitesBridge_BeneficialUses_fact_BeneficialUseCategory</a></td><td><a href="../tables/CVs_BeneficialUse.html">CVs.BeneficialUse</a></td><td><a href="../tables/Core_SitesBridge_BeneficialUses_fact.html">Core.SitesBridge_BeneficialUses_fact</a></td><td>Name</td><td>BeneficialUseCV</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_SitesBridge_BeneficialUses_fact_fk_SitesBridge_BeneficialUses_fact_SiteVariableAmounts_fact.html">fk_SitesBridge_BeneficialUses_fact_SiteVariableAmounts_fact</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td><a href="../tables/Core_SitesBridge_BeneficialUses_fact.html">Core.SitesBridge_BeneficialUses_fact</a></td><td>VariableAmountID</td><td>SiteVariableAmountID</td>
 </tr>
-<tr class="altRow">
-<td><a href="../foreignKeys/Core_SitesVariableAmountBridgeAllocations_fact_fk_SitesVariableAmountAllocations_fact_Allocations_dim.html">fk_SitesVariableAmountAllocations_fact_Allocations_dim</a></td><td><a href="../tables/Core_Allocations_dim.html">Core.Allocations_dim</a></td><td><a href="../tables/Core_SitesVariableAmountBridgeAllocations_fact.html">Core.SitesVariableAmountBridgeAllocations_fact</a></td><td>AllocationID</td><td>AllocationID</td>
-</tr>
 <tr>
-<td><a href="../foreignKeys/Core_SitesVariableAmountBridgeAllocations_fact_fk_SitesVariableAmountAllocations_fact_SiteVariableAmounts_fact.html">fk_SitesVariableAmountAllocations_fact_SiteVariableAmounts_fact</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td><a href="../tables/Core_SitesVariableAmountBridgeAllocations_fact.html">Core.SitesVariableAmountBridgeAllocations_fact</a></td><td>VariableAmountID</td><td>SiteVariableAmountID</td>
-</tr>
-<tr class="altRow">
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_Date_dim_end.html">fk_SiteVariableAmounts_Date_dim_end</a></td><td><a href="../tables/Core_Date_dim.html">Core.Date_dim</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>DateID</td><td>TimeframeEndID</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_Date_dim_pub.html">fk_SiteVariableAmounts_Date_dim_pub</a></td><td><a href="../tables/Core_Date_dim.html">Core.Date_dim</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>DateID</td><td>DataPublicationDateID</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_Date_dim_start.html">fk_SiteVariableAmounts_Date_dim_start</a></td><td><a href="../tables/Core_Date_dim.html">Core.Date_dim</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>DateID</td><td>TimeframeStartID</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_fact_BeneficialUseCategory.html">fk_SiteVariableAmounts_fact_BeneficialUseCategory</a></td><td><a href="../tables/CVs_BeneficialUse.html">CVs.BeneficialUse</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>Name</td><td>PrimaryUseCategoryCV</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_fact_CropType.html">fk_SiteVariableAmounts_fact_CropType</a></td><td><a href="../tables/CVs_CropType.html">CVs.CropType</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>Name</td><td>CropTypeCV</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_fact_CustomerTypeCV.html">fk_SiteVariableAmounts_fact_CustomerTypeCV</a></td><td><a href="../tables/CVs_CustomerTypeCV.html">CVs.CustomerTypeCV</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>Name</td><td>CustomerTypeCV</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_fact_IrrigationMethod.html">fk_SiteVariableAmounts_fact_IrrigationMethod</a></td><td><a href="../tables/CVs_IrrigationMethod.html">CVs.IrrigationMethod</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>Name</td><td>IrrigationMethodCV</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_fact_Methods_dim.html">fk_SiteVariableAmounts_fact_Methods_dim</a></td><td><a href="../tables/Core_Methods_dim.html">Core.Methods_dim</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>MethodID</td><td>MethodID</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_fact_Organizations_dim.html">fk_SiteVariableAmounts_fact_Organizations_dim</a></td><td><a href="../tables/Core_Organizations_dim.html">Core.Organizations_dim</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>OrganizationID</td><td>OrganizationID</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_fact_ReportYearCV.html">fk_SiteVariableAmounts_fact_ReportYearCV</a></td><td><a href="../tables/CVs_ReportYearCV.html">CVs.ReportYearCV</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>Name</td><td>ReportYearCV</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_fact_SDWISIdentifier.html">fk_SiteVariableAmounts_fact_SDWISIdentifier</a></td><td><a href="../tables/CVs_SDWISIdentifier.html">CVs.SDWISIdentifier</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>Name</td><td>SDWISIdentifierCV</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_SiteVariableAmounts_fact_Variables_dim.html">fk_SiteVariableAmounts_fact_Variables_dim</a></td><td><a href="../tables/Core_Variables_dim.html">Core.Variables_dim</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>VariableSpecificID</td><td>VariableSpecificID</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_VariableAmounts_fact_fk_VariableAmounts_fact_Sites_dim.html">fk_VariableAmounts_fact_Sites_dim</a></td><td><a href="../tables/Core_Sites_dim.html">Core.Sites_dim</a></td><td><a href="../tables/Core_VariableAmounts_fact.html">Core.VariableAmounts_fact</a></td><td>SiteID</td><td>SiteID</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_Variables_dim_fk_Variables_dim_AggregationStatistic.html">fk_Variables_dim_AggregationStatistic</a></td><td><a href="../tables/CVs_AggregationStatistic.html">CVs.AggregationStatistic</a></td><td><a href="../tables/Core_Variables_dim.html">Core.Variables_dim</a></td><td>Name</td><td>AggregationStatisticCV</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_Variables_dim_fk_Variables_dim_ReportYearType.html">fk_Variables_dim_ReportYearType</a></td><td><a href="../tables/CVs_ReportYearType.html">CVs.ReportYearType</a></td><td><a href="../tables/Core_Variables_dim.html">Core.Variables_dim</a></td><td>Name</td><td>ReportYearTypeCV</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_Variables_dim_fk_Variables_dim_Units.html">fk_Variables_dim_Units</a></td><td><a href="../tables/CVs_Units.html">CVs.Units</a></td><td><a href="../tables/Core_Variables_dim.html">Core.Variables_dim</a></td><td>Name</td><td>AmountUnitCV</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_Variables_dim_fk_Variables_dim_Units_interval.html">fk_Variables_dim_Units_interval</a></td><td><a href="../tables/CVs_Units.html">CVs.Units</a></td><td><a href="../tables/Core_Variables_dim.html">Core.Variables_dim</a></td><td>Name</td><td>AggregationIntervalUnitCV</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_Variables_dim_fk_Variables_dim_Units_max.html">fk_Variables_dim_Units_max</a></td><td><a href="../tables/CVs_Units.html">CVs.Units</a></td><td><a href="../tables/Core_Variables_dim.html">Core.Variables_dim</a></td><td>Name</td><td>MaximumAmountUnitCV</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_Variables_dim_fk_Variables_dim_Variable.html">fk_Variables_dim_Variable</a></td><td><a href="../tables/CVs_Variable.html">CVs.Variable</a></td><td><a href="../tables/Core_Variables_dim.html">Core.Variables_dim</a></td><td>Name</td><td>VariableCV</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_Variables_dim_fk_Variables_dim_VariableSpecific.html">fk_Variables_dim_VariableSpecific</a></td><td><a href="../tables/CVs_VariableSpecific.html">CVs.VariableSpecific</a></td><td><a href="../tables/Core_Variables_dim.html">Core.Variables_dim</a></td><td>Name</td><td>VariableSpecificCV</td>
 </tr>
+<tr>
+<td><a href="../foreignKeys/Core_WaterSourceBridge_Sites_fact_fk_WaterSourceBridge_Sites_fact_Sites_dim.html">fk_WaterSourceBridge_Sites_fact_Sites_dim</a></td><td><a href="../tables/Core_Sites_dim.html">Core.Sites_dim</a></td><td><a href="../tables/Core_WaterSourceBridge_Sites_fact.html">Core.WaterSourceBridge_Sites_fact</a></td><td>SiteID</td><td>SiteID</td>
+</tr>
 <tr class="altRow">
+<td><a href="../foreignKeys/Core_WaterSourceBridge_Sites_fact_fk_WaterSourceBridge_Sites_fact_WaterSources_dim.html">fk_WaterSourceBridge_Sites_fact_WaterSources_dim</a></td><td><a href="../tables/Core_WaterSources_dim.html">Core.WaterSources_dim</a></td><td><a href="../tables/Core_WaterSourceBridge_Sites_fact.html">Core.WaterSourceBridge_Sites_fact</a></td><td>WaterSourceID</td><td>WaterSourceID</td>
+</tr>
+<tr>
 <td><a href="../foreignKeys/Core_WaterSources_dim_fk_WaterSources_dim_GNISFeatureName.html">fk_WaterSources_dim_GNISFeatureName</a></td><td><a href="../tables/CVs_GNISFeatureName.html">CVs.GNISFeatureName</a></td><td><a href="../tables/Core_WaterSources_dim.html">Core.WaterSources_dim</a></td><td>Name</td><td>GNISFeatureNameCV</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/Core_WaterSources_dim_fk_WaterSources_dim_WaterQualityIndicator.html">fk_WaterSources_dim_WaterQualityIndicator</a></td><td><a href="../tables/CVs_WaterQualityIndicator.html">CVs.WaterQualityIndicator</a></td><td><a href="../tables/Core_WaterSources_dim.html">Core.WaterSources_dim</a></td><td>Name</td><td>WaterQualityIndicatorCV</td>
 </tr>
-<tr class="altRow">
+<tr>
 <td><a href="../foreignKeys/Core_WaterSources_dim_fk_WaterSources_dim_WaterSourceType.html">fk_WaterSources_dim_WaterSourceType</a></td><td><a href="../tables/CVs_WaterSourceType.html">CVs.WaterSourceType</a></td><td><a href="../tables/Core_WaterSources_dim.html">Core.WaterSources_dim</a></td><td>Name</td><td>WaterSourceTypeCV</td>
 </tr>
-<tr>
+<tr class="altRow">
 <td><a href="../foreignKeys/CVs_BeneficialUse_fk_BeneficialUse_AggBridge_BeneficialUses_fact.html">fk_BeneficialUse_AggBridge_BeneficialUses_fact</a></td><td><a href="../tables/Core_AggBridge_BeneficialUses_fact.html">Core.AggBridge_BeneficialUses_fact</a></td><td><a href="../tables/CVs_BeneficialUse.html">CVs.BeneficialUse</a></td><td>BeneficialUseCategoryCV</td><td>Name</td>
 </tr>
 </table>

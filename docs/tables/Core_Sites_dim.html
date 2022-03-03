@@ -33,45 +33,36 @@
 <td> </td><td><a href="../columns/Core_Sites_dim_SiteUUID.html">SiteUUID</a></td><td>NVarChar(200)</td><td> </td><td> </td><td> </td><td>Foreign key unique identifier to Sites_dim table.</td><td> </td>
 </tr>
 <tr>
-<td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Sites_dim_WaterSourceID.html">WaterSourceID</a></td><td class="FkCol">BigInt</td><td class="FkCol">
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Internal unique identifier integer for water source.</td><td class="FkCol">
-<p class="boolImg">
-<img src="../images/ok12d.gif"></p>
-</td>
-</tr>
-<tr class="altRow">
 <td> </td><td><a href="../columns/Core_Sites_dim_CoordinateAccuracy.html">CoordinateAccuracy</a></td><td>NVarChar(255)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>Description of the data accuracy.  The data are accurate to +/- x of a second of a degree (using a differentially corrected GPS).</td><td> </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Sites_dim_CoordinateMethodCV.html">CoordinateMethodCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Description of the coordinate method used to generate the GIS location portion of the data.</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
-<tr class="altRow">
+<tr>
 <td> </td><td><a href="../columns/Core_Sites_dim_County.html">County</a></td><td>NVarChar(20)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>Name of the county the data site is located in.</td><td> </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Sites_dim_EPSGCodeCV.html">EPSGCodeCV</a></td><td class="FkCol">NVarChar(50)</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">EPSG Code for projection used for WaDE (e.g.,  EPSG:4326).</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
-<tr class="altRow">
+<tr>
 <td> </td><td><a href="../columns/Core_Sites_dim_Geometry.html">Geometry</a></td><td>Geometry</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>The GIS objects / shape written in Well-Known Text (WKT) format.</td><td> </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Sites_dim_GNISCodeCV.html">GNISCodeCV</a></td><td class="FkCol">NVarChar(50)</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
@@ -80,25 +71,25 @@
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
-<tr class="altRow">
+<tr>
 <td> </td><td><a href="../columns/Core_Sites_dim_HUC12.html">HUC12</a></td><td>NVarChar(20)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>The Hydrologic Unit Identifier Code at level 12 of where the data site is located in.</td><td> </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td> </td><td><a href="../columns/Core_Sites_dim_HUC8.html">HUC8</a></td><td>NVarChar(20)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>The Hydrologic Unit Identifier Code at level 8 of where the data site is located in.</td><td> </td>
 </tr>
-<tr class="altRow">
+<tr>
 <td> </td><td><a href="../columns/Core_Sites_dim_Latitude.html">Latitude</a></td><td>Double</td><td> </td><td> </td><td> </td><td>Latitude coordinate of the data site.  Up to six significant digits in WGS 84.</td><td> </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td> </td><td><a href="../columns/Core_Sites_dim_Longitude.html">Longitude</a></td><td>Double</td><td> </td><td> </td><td> </td><td>Longitude coordinate of the data site.  Up to six significant digits in WGS 84.</td><td> </td>
 </tr>
-<tr class="altRow">
+<tr>
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Sites_dim_NHDNetworkStatusCV.html">NHDNetworkStatusCV</a></td><td class="FkCol">NVarChar(50)</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
@@ -107,7 +98,7 @@
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Sites_dim_NHDProductCV.html">NHDProductCV</a></td><td class="FkCol">NVarChar(50)</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
@@ -116,28 +107,28 @@
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
-<tr class="altRow">
+<tr>
 <td> </td><td><a href="../columns/Core_Sites_dim_PODorPOUSite.html">PODorPOUSite</a></td><td>NVarChar(20)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>WaDe identifier term if the data site is a point of diversion (POD), place of use (POU), or a gage station.  Used for linking sites under similar records.</td><td> </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td> </td><td><a href="../columns/Core_Sites_dim_SiteName.html">SiteName</a></td><td>NVarChar(500)</td><td> </td><td> </td><td> </td><td>Recognized name of the data site by the data provider.</td><td> </td>
 </tr>
-<tr class="altRow">
+<tr>
 <td> </td><td><a href="../columns/Core_Sites_dim_SiteNativeID.html">SiteNativeID</a></td><td>NVarChar(50)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>Unique identifier code / ID used by the data provider to distinguish the data site in the source data set.</td><td> </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td> </td><td><a href="../columns/Core_Sites_dim_SitePoint.html">SitePoint</a></td><td>Geometry</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
 </td><td> </td><td> </td><td>The GIS data point / center of area written in Well-Known Text (WKT) format.  Similar to Geometry field.</td><td> </td>
 </tr>
-<tr class="altRow">
+<tr>
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Sites_dim_SiteTypeCV.html">SiteTypeCV</a></td><td class="FkCol">NVarChar(100)</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
@@ -146,7 +137,7 @@
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
-<tr>
+<tr class="altRow">
 <td class="FkCol"> </td><td class="FkCol"><a href="../columns/Core_Sites_dim_StateCV.html">StateCV</a></td><td class="FkCol">BigInt</td><td class="FkCol">
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
@@ -155,7 +146,7 @@
 <img src="../images/ok12d.gif"></p>
 </td>
 </tr>
-<tr class="altRow">
+<tr>
 <td> </td><td><a href="../columns/Core_Sites_dim_USGSSiteID.html">USGSSiteID</a></td><td>NVarChar(250)</td><td>
 <p class="boolImg">
 <img src="../images/ok12d.gif"></p>
@@ -193,9 +184,6 @@
 </tr>
 <tr>
 <td><a href="../foreignKeys/Core_Sites_dim_fk_Sites_dim_States.html">fk_Sites_dim_States</a></td><td><a href="../tables/CVs_States.html">CVs.States</a></td><td><a href="../tables/Core_Sites_dim.html">Core.Sites_dim</a></td><td>Name</td><td>StateCV</td>
-</tr>
-<tr class="altRow">
-<td><a href="../foreignKeys/Core_Sites_dim_fk_Sites_dim_WaterSources_dim.html">fk_Sites_dim_WaterSources_dim</a></td><td><a href="../tables/Core_WaterSources_dim.html">Core.WaterSources_dim</a></td><td><a href="../tables/Core_Sites_dim.html">Core.Sites_dim</a></td><td>WaterSourceID</td><td>WaterSourceID</td>
 </tr>
 </table>
 <br>

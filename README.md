@@ -30,9 +30,8 @@ https://github.com/WSWCWaterDataExchange/WaDEControlledVocabularies
 https://github.com/WSWCWaterDataExchange/JupyterNotebooks
 
 
-## WaDE 2.0 Upcoming Portal
-https://github.com/WSWCWaterDataExchange/WaDEPortal
-
+## WestDAAT
+https://westdaat.westernstateswater.org/
 
 
 # WaDE regular contributors   
